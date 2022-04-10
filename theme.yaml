@@ -1,0 +1,10 @@
+id: hux-pro-tourist
+name: Hux-Tourist
+author:
+  name: Tourist17846
+  website: https://tourist17846.cn
+description:
+logo:
+website: https://github.com/StarlightUnion/halo-theme-hux-tourist
+version: 1.0.0
+require: 1.3.0
