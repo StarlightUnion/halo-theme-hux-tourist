@@ -77,7 +77,7 @@
                 <p class="copyright text-muted">
                     Copyright &copy; ${options.blog_title!} ${(options.birthday)?number_to_date?string("yyyy")}
                     <br>
-                    Theme by <a href="http://huangxuan.me">Hux</a> |
+                    Theme by <a href="https://github.com/StarlightUnion/halo-theme-hux-tourist">Hux-Tourist</a> |
                     Published with <a href="https://halo.run" target="_blank">Halo</a><br>
                     <@global.footer />
                 </p>
@@ -112,7 +112,7 @@
         async("${theme_base!}/source/js/jquery.tagcloud.js", function () {
             $.fn.tagcloud.defaults = {
                 //size: {start: 1, end: 1, unit: 'em'},
-                color: {start: '#bbbbee', end: '#0085a1'},
+                color: {start: '#bbbbee', end: '#1e90ff'},
             };
             $('#tag_cloud a').tagcloud();
         })

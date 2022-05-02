@@ -16,6 +16,11 @@ general:
       label: 归档页描述
       type: text
 
+    search_slogn:
+      name: search_slogn
+      label: 搜索页描述
+      type: text
+
     index_cover:
       name: index_cover
       label: 首页顶部图
@@ -29,6 +34,11 @@ general:
     archives_cover:
       name: archives_cover
       label: 归档页顶部图
+      type: attachment
+
+    search_cover:
+      name: search_cover
+      label: 搜索页页顶部图
       type: attachment
 
     notice:

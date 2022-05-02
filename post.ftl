@@ -24,7 +24,6 @@
     </style>
     <header class="intro-header style-text">
 </#if>
-
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -47,16 +46,12 @@
 <article>
     <div class="container">
         <div class="row">
-
             <div class="
                 col-lg-8 col-lg-offset-2
                 col-md-10 col-md-offset-1
                 post-container">
-
                 ${post.formatContent!}
-
                 <hr>
-
                 <ul class="pager">
                     <#if prevPost??>
                         <li class="previous">

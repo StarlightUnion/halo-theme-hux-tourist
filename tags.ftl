@@ -26,9 +26,9 @@
                             </@postTag>
                         </a>
                         <#list tags?sort_by('postCount')?reverse as tag>
-                            <a class="tag-button" 
+                            <a class="tag-button"
                                 data-encode="${tag.slug}"
-                                title="${tag.name}" 
+                                title="${tag.name}"
                                 rel="${tag.postCount}">${tag.name}
                                 <sup>${tag.postCount}</sup>
                             </a>
