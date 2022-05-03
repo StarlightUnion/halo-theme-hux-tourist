@@ -9,8 +9,9 @@
     <@global.head />
     <title>${title}</title>
     <link rel="stylesheet" href="${theme_base!}/source/lib/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="${theme_base!}/source/css/hux-blog.min.css">
+    <link rel="stylesheet" href="${theme_base!}/source/css/hux-tourist.css">
     <link rel="stylesheet" href="${theme_base!}/source/css/syntax.css">
+    <link rel="stylesheet" href="${theme_base!}/source/css/search.css">
     <link href="${theme_base!}/source/lib/highlight.js/github.min.css" rel="stylesheet">
     <link href="${theme_base!}/source/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='//fonts.loli.net/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>

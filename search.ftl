@@ -16,6 +16,13 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="search-box-main">
+                <form class="s-search">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                    <input class="text-input" type="search" name="keyword" placeholder="搜索..."
+                            autocomplete="off" required>
+                </form>
+            </div>
             <!-- post-list -->
             <#if posts?? && posts.content?size gt 0>
                 <#--  <#if posts?? && posts.getTotalElements() gt 0>  -->
@@ -41,12 +48,12 @@
                         <@paginationTag method="index" page="${posts.number}" total="${posts.totalPages}" display="0">
                             <#if pagination.hasPrev>
                                 <li class="previous">
-                                    <a href="${pagination.prevPageFullPath!}">&larr; Newer Posts</a>
+                                    <a href="${pagination.prevPageFullPath!}">&larr; 向前</a>
                                 </li>
                             </#if>
                             <#if pagination.hasNext>
                                 <li class="next">
-                                    <a href="${pagination.nextPageFullPath!}">Older Posts &rarr;</a>
+                                    <a href="${pagination.nextPageFullPath!}">往后 &rarr;</a>
                                 </li>
                             </#if>
                         </@paginationTag>
@@ -54,15 +61,6 @@
               </#if>
             <#else>
                 <div id="post-list" class="post-list inner">
-                    <div class="search-box">
-                        <!-- search start -->
-                        <form class="s-search">
-                            <i class="fa fa-search" aria-hidden="true"></i>
-                            <input class="text-input" type="search" name="keyword" placeholder="Search..."
-                                    autocomplete="off" required>
-                        </form>
-                        <!-- search end -->
-                    </div>
                     <#include "module/search-none.ftl" />
                 </div>
             </#if>

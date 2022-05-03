@@ -18,7 +18,7 @@
             <a class="navbar-brand" href="${blog_url!}">${blog_title!}</a>
         </div>
 
-        <div id="huxblog_navbar">
+        <div id="hux_navbar">
             <div class="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <@menuTag method="list">
@@ -29,25 +29,24 @@
                         </#list>
                     </@menuTag>
                 </ul>
+
+                <#include "../module/search-box.ftl">
             </div>
         </div>
     </div>
 </nav>
 <script>
-    // Drop Bootstarp low-performance Navbar
-    // Use customize navbar with high-quality material design animation
-    // in high-perf jank-free CSS3 implementation
     var $body = document.body;
     var $toggle = document.querySelector('.navbar-toggle');
-    var $navbar = document.querySelector('#huxblog_navbar');
+    var $navbar = document.querySelector('#hux_navbar');
     var $collapse = document.querySelector('.navbar-collapse');
+    var $search = document.querySelector('.search-box');
+    var $searchInput = document.querySelector('.text-input');
 
-    var __HuxNav__ = {
+    var __navbar = {
         close: function () {
             $navbar.className = " ";
-            // wait until animation end.
             setTimeout(function () {
-                // prevent frequently toggle
                 if ($navbar.className.indexOf('in') < 0) {
                     $collapse.style.height = "0px"
                 }
@@ -59,29 +58,28 @@
         }
     };
 
-    // Bind Event
     $toggle.addEventListener('click', function (e) {
         if ($navbar.className.indexOf('in') > 0) {
-            __HuxNav__.close()
+            __navbar.close()
         } else {
-            __HuxNav__.open()
+            __navbar.open()
         }
     });
 
-    /**
-     * Since Fastclick is used to delegate 'touchstart' globally
-     * to hack 300ms delay in iOS by performing a fake 'click',
-     * Using 'e.stopPropagation' to stop 'touchstart' event from
-     * $toggle/$collapse will break global delegation.
-     *
-     * Instead, we use a 'e.target' filter to prevent handler
-     * added to document close HuxNav.
-     *
-     * Also, we use 'click' instead of 'touchstart' as compromise
-     */
+    $search.addEventListener('click', function (e) {
+        $searchInput.focus();
+    });
+
     document.addEventListener('click', function (e) {
+        const classNames = [
+            'icon-bar',
+            'text-input',
+            'fa fa-search',
+            'search-box',
+            's-search'
+        ];
         if (e.target == $toggle) return;
-        if (e.target.className == 'icon-bar') return;
-        __HuxNav__.close();
+        if (classNames.includes(e.target.className)) return;
+        __navbar.close();
     });
 </script>

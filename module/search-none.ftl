@@ -1,6 +1,6 @@
 <section class="no-results not-found">
     <header class="not-found-header">
-        <h1 class="not-found-title">没有找到任何东西！</h1>
+        <h1 class="not-found-title">未查询到任何结果...</h1>
     </header>
 
     <div class="page-content">
@@ -8,7 +8,7 @@
             <div class="sorry">
                 <p>没有找到你想要的，看看其他的吧。</p>
                 <div class="sorry-inner">
-                    <ul class="search-no-reasults">
+                    <ul class="search-no-results">
                         <@postTag method="latest" top="10">
                             <#list posts as post>
                                 <li><a href="${post.fullPath!}" title="${post.title!}">${post.title!}</a> </li>
