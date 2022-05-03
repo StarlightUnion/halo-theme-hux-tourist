@@ -48,7 +48,7 @@
                 <#if settings.sidebar_tags!true>
                 <section>
                     <!-- no hr -->
-                    <h5><a href="${tags_url!}">FEATURED TAGS</a></h5>
+                    <h5><a href="${tags_url!}">标签</a></h5>
                     <div class="tags">
                         <@tagTag method="list">
                             <#if tags?? && tags?size gt 0>
@@ -66,7 +66,7 @@
                 <!-- Friends Blog -->
                 <#if settings.sidebar_links!true>
                     <hr>
-                    <h5>FRIENDS</h5>
+                    <h5>友链</h5>
                     <ul class="list-inline">
                         <@linkTag method="list">
                             <#if links?? && links?size gt 0>
@@ -103,7 +103,7 @@
                 <#if settings.sidebar_tags!true>
                 <section>
                     <hr class="hidden-sm hidden-xs">
-                    <h5><a href="${tags_url!}">FEATURED TAGS</a></h5>
+                    <h5><a href="${tags_url!}">标签</a></h5>
                     <div class="tags">
                         <@tagTag method="list">
                             <#if tags?? && tags?size gt 0>
@@ -121,7 +121,7 @@
                 <!-- Short About -->
                 <section class="visible-md visible-lg">
                     <hr>
-                    <h5><a href="${blog_url!}/s/about">ABOUT ME</a></h5>
+                    <h5><a href="${blog_url!}/s/about">关于我</a></h5>
                     <div class="short-about">
                         <img src="${user.avatar!}"/>
                         <p>${user.description!}</p>
@@ -167,16 +167,6 @@
                                 </a>
                             </li>
                             </#if>
-                            <#if settings.facebook??>
-                                <li>
-                                    <a target="_blank" href="${settings.facebook}" title="FaceBook">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                    </a>
-                                </li>
-                            </#if>
                             <#if settings.bilibili??>
                             <li>
                                 <a target="_blank" href="${settings.bilibili}" title="bilibili">
@@ -197,13 +187,23 @@
                                 </a>
                             </li>
                             </#if>
+                            <#if settings.steam??>
+                            <li>
+                                <a target="_blank" href="${settings.steam}" title="Steam">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-steam fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            </#if>
                         </ul>
                     </div>
                 </section>
                 <!-- Friends Blog -->
                 <#if settings.sidebar_links!true>
                     <hr>
-                    <h5>FRIENDS</h5>
+                    <h5>友链</h5>
                     <ul class="list-inline">
                         <@linkTag method="list">
                             <#if links?? && links?size gt 0>

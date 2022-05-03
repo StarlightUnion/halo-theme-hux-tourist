@@ -81,14 +81,14 @@ sns:
       label: Twitter
       type: text
 
-    facebook:
-      name: facebook
-      label: Facebook
-      type: text
-
     bilibili:
       name: bilibili
       label: BiliBili
+      type: text
+
+    steam:
+      name: steam
+      label: Steam
       type: text
 
 style:

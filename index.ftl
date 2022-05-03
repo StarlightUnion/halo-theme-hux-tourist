@@ -21,12 +21,12 @@
             <@paginationTag method="index" page="${posts.number}" total="${posts.totalPages}" display="0">
                 <#if pagination.hasPrev>
                     <li class="previous">
-                        <a href="${pagination.prevPageFullPath!}">&larr; Newer Posts</a>
+                        <a href="${pagination.prevPageFullPath!}">&larr; 向前</a>
                     </li>
                 </#if>
                 <#if pagination.hasNext>
                     <li class="next">
-                        <a href="${pagination.nextPageFullPath!}">Older Posts &rarr;</a>
+                        <a href="${pagination.nextPageFullPath!}">往后 &rarr;</a>
                     </li>
                 </#if>
             </@paginationTag>
