@@ -167,16 +167,6 @@
                                 </a>
                             </li>
                             </#if>
-                            <#if settings.bilibili??>
-                            <li>
-                                <a target="_blank" href="${settings.bilibili}" title="bilibili">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-stack-1x fa-width-90 biliFont fa-inverse">1</i>
-                                    </span>
-                                </a>
-                            </li>
-                            </#if>
                             <#if settings.github??>
                             <li>
                                 <a target="_blank" href="${settings.github}" title="GitHub">
@@ -193,6 +183,16 @@
                                     <span class="fa-stack fa-lg">
                                         <i class="fa fa-circle fa-stack-2x"></i>
                                         <i class="fa fa-steam fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            </#if>
+                            <#if settings.bilibili??>
+                            <li>
+                                <a target="_blank" href="${settings.bilibili}" title="bilibili">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-stack-1x fa-width-90 biliFont fa-inverse">1</i>
                                     </span>
                                 </a>
                             </li>
