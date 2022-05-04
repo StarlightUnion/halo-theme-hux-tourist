@@ -25,6 +25,7 @@
   border: 1px solid #bfbfbf;
   border-radius: 999em;
   box-sizing: border-box;
+  background: #fff;
 }
 
 [type=search] {
