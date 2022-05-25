@@ -137,6 +137,16 @@
                                 </a>
                             </li>
                             </#if>
+                            <#if settings.mail??>
+                            <li>
+                                <a href="mailto:${settings.mail}" title="E-Mail">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa fa-envelope fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            </#if>
                             <#if settings.twitter??>
                             <li>
                                 <a href="${settings.twitter}" title="Twitter">

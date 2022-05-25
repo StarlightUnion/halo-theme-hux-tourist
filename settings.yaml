@@ -91,6 +91,11 @@ sns:
       label: Steam
       type: text
 
+    mail:
+      name: mail
+      label: 邮箱
+      type: text
+
 style:
   label: 样式设置
   items:
